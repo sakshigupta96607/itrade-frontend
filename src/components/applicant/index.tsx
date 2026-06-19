@@ -10,7 +10,7 @@ import {
 } from '@mui/x-data-grid'
 import { useNavigate } from 'react-router-dom'
 import { Box, Button } from '@mui/material'
-import LoaderUI from '@/components/loader/loader'
+import LoaderUI from '@/components/common/loader/loader'
 import jsPDF from 'jspdf'
 import autoTable from 'jspdf-autotable'
 import 'jspdf-autotable'

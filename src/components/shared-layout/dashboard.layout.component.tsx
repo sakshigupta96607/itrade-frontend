@@ -24,7 +24,6 @@ import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle'
 import { menuHistoryState, themeModeState } from '@/states/state'
 import { LocalStorageService } from '@/helpers/local-storage-service'
 import AddToQueueIcon from '@mui/icons-material/AddToQueue'
-import CompactLocationBar from '../location'
 import {
   ArrowBack,
   Brightness4,
@@ -66,9 +65,9 @@ import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturi
 import { LanguagesIcon, QrCodeIcon } from 'lucide-react'
 import MonitorIcon from '@mui/icons-material/Monitor'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
-import SmsIcon from '@mui/icons-material/Sms'
+
 import EmailIcon from '@mui/icons-material/Email'
-import VerifiedIcon from '@mui/icons-material/Verified'
+
 import FactCheckIcon from '@mui/icons-material/FactCheck'
 import DescriptionIcon from '@mui/icons-material/Description'
 import PublicIcon from '@mui/icons-material/Public'
@@ -156,7 +155,6 @@ const CountrySelector = () => {
   return (
     <Typography>
       <Stack direction="row" alignItems="center" spacing={0.6} sx={{ mt: '2px' }}>
-        {/* 🔹 MULTIPLE COUNTRIES → DROPDOWN */}
         {staff.staffCountries?.length > 1 ? (
           <Select
             size="small"

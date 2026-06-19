@@ -4,7 +4,7 @@ import { DataGrid, GridColDef, GridToolbarContainer, GridToolbarColumnsButton, G
 import { styled } from '@mui/material/styles'
 import { PreviewOutlined } from '@mui/icons-material'
 import { TransactionService } from '@/services/transaction.service'
-import LoaderUI from '@/components/loader/loader'
+import LoaderUI from '@/components/common/loader/loader'
 import { Card, Stack } from '@mui/material'
 import { useRecoilState } from 'recoil'
 import { alertState, alertTextState, alertTypeState } from '@/states/state'

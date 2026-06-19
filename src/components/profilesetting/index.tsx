@@ -121,7 +121,7 @@ const ProfileMenu = () => {
   useEffect(() => {
     if (staff) {
       // Create a unique seed using staff ID and name
-      const seed = `${staff.staffId}-${staff.staffFirstName}-${staff.staffLastName}`.toLowerCase().replace(/\s+/g, '')
+      const seed = `${staff?.staffId}-${staff?.staffFirstName}-${staff?.staffLastName}`.toLowerCase().replace(/\s+/g, '')
       setAvatarSeed(seed)
     }
   }, [staff])
@@ -302,8 +302,8 @@ const ProfileMenu = () => {
             bgcolor: avatarColor,
           }}
         >
-          {staff.staffFirstName?.[0]}
-          {staff.staffLastName?.[0]}
+          {staff?.staffFirstName?.[0]}
+          {staff?.staffLastName?.[0]}
         </Avatar>
 
         <Box sx={{ display: { xs: 'none', sm: 'flex' }, flexDirection: 'column' }}>
@@ -334,7 +334,7 @@ const ProfileMenu = () => {
             <Avatar
               //@ts-ignore
 
-              src={getAvatarUrl(`${staff.staffId}-${staff.staffFirstName}-${staff.staffLastName}`)}
+              src={getAvatarUrl(`${staff?.staffId}-${staff?.staffFirstName}-${staff?.staffLastName}`)}
               sx={{
                 width: 42,
                 height: 42,

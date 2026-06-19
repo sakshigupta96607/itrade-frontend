@@ -18,7 +18,7 @@ import {
 } from '@/states/state'
 import { UserService } from '@/services/user.service'
 import staticdataService from '@/services/staticdata.service'
-import LoaderUI from '@/components/loader/loader'
+import LoaderUI from '@/components/common/loader/loader'
 import { TransactionService } from '@/services/transaction.service'
 import { FieldValidationService } from '@/services/fieldvalidstion.service'
 import { CountryLabelData, LoginPageLabel } from '@/types/field.validation.type'

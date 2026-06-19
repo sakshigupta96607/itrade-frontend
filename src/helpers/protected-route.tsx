@@ -25,8 +25,8 @@ function ProtectedRoute({
     return outlet
   
   } else {
-    return <Navigate to={{ pathname: authenticationPath }} />
-    // return outlet
+    // return <Navigate to={{ pathname: authenticationPath }} />
+    return outlet
   }
 }
 

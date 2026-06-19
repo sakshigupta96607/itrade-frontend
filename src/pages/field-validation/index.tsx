@@ -5,7 +5,7 @@ import { HelperService } from '@/helpers/helper'
 import { LocalStorageService } from '@/helpers/local-storage-service'
 import { FieldValidationService } from '@/services/fieldvalidstion.service'
 import { useTheme } from '@emotion/react'
-import LoaderUI from '@/components/loader/loader'
+import LoaderUI from '@/components/common/loader/loader'
 import HasPermission from '@/components/permissionWrapper'
 
 const helper = new HelperService()
