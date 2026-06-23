@@ -6,11 +6,11 @@ import staticdataService from '@/services/staticdata.service'
 import { useRecoilState } from 'recoil'
 import { selectedAppState, alertState, alertTextState, alertTypeState, loaderState, availableBalanceState } from '@/states/state'
 import { LocalStorageService } from '@/helpers/local-storage-service'
-import TransactionPanel from '@/components/transaction-panel'
+// import TransactionPanel from '@/components/transaction-panel'
 import { HelperService } from '@/helpers/helper'
 import { Link, useNavigate } from 'react-router-dom'
 import { AgChartOptions } from 'ag-charts-community'
-import TransactionModal from '@/components/transaction-panel'
+// import TransactionModal from '@/components/transaction-panel'
 import { DataGrid, GridToolbarContainer, GridToolbarColumnsButton, GridToolbarFilterButton, GridFilterModel } from '@mui/x-data-grid'
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf'
 import DownloadIcon from '@mui/icons-material/Download'
@@ -18,7 +18,7 @@ import FindReplaceIcon from '@mui/icons-material/FindReplace'
 import jsPDF from 'jspdf'
 import autoTable from 'jspdf-autotable'
 import { ApplicantService } from '@/services/applicant.service'
-import CompactLocationBar from '@/components/location'
+// import CompactLocationBar from '@/components/location'
 import ProductConfigService from '@/services/product.config.service'
 
 const Dashboard = () => {
@@ -414,7 +414,7 @@ const Dashboard = () => {
       <Typography variant="h4" gutterBottom sx={{ mt: 0, mb: 1 }}>
         <b>Dashboard </b>
       </Typography>
-      <CompactLocationBar />
+      {/* <CompactLocationBar /> */}
       <Grid container spacing={2}>
         {/* LEFT SIDE (Balances + Consumers + Volume + Recent Transactions) */}
         <Grid item xs={12} md={12}>
@@ -526,7 +526,7 @@ const Dashboard = () => {
                   <Typography variant="subtitle1" fontWeight={700}>
                     Volume
                   </Typography>
-                  <TransactionPanel />
+                  {/* <TransactionPanel /> */}
                 </CardContent>
               </Card>
             </Grid>

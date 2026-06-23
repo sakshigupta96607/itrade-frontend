@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import DashboardLayout from './components/shared-layout'
-import ResetPasswordPage from './pages/resetpassword'
 import ProtectedRoute, { ProtectedRouteProps } from './helpers/protected-route'
 import Login from './pages/newlogin'
 import type {} from '@mui/x-data-grid/themeAugmentation'
@@ -10,10 +9,10 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { ThemeProvider } from '@emotion/react'
 import { createTheme } from '@mui/material/styles'
-import TransactionListing from './pages/transaction/index'
-import CustomSnackbar from './components/customsnackbar/snackbar'
 
-import GifModal from './components/successModal'
+// import CustomSnackbar from './components/customsnackbar/snackbar'
+
+// import GifModal from './components/successModal'
 
 import Dashboard from './pages/dashboard/dashboard.page'
 
@@ -21,14 +20,11 @@ import { inactivityTiming, themeModeState } from '@/states/state'
 import { useRecoilState } from 'recoil'
 import { CssBaseline } from '@mui/material'
 
-// import AuditLogTable from './pages/audit-log'
-
 import { lazy, useCallback, useEffect, useState } from 'react'
 import { useAutoLogout } from './helpers/useAutoLogout'
 import { LocalStorageService } from './helpers/local-storage-service'
-import { CrossBorderPaymentsDashboard } from './pages/dashboard'
 import EnhancedDashboard from './pages/dashboard/dashboard-new'
-import InactivityWarningModal from './components/inactivity-modal'
+// import InactivityWarningModal from './components/inactivity-modal'
 
 
 function App() {
@@ -158,20 +154,19 @@ function App() {
         {/* <LoaderBackdrop /> */}
         {/* <Message /> */}
         <ToastContainer />
-        <CustomSnackbar />
-        <InactivityWarningModal open={warningOpen} onStay={() => setWarningOpen(false)} onLogout={handleLogout} />
+   
+     
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<ProtectedRoute {...defaultProtectedRouteProps} outlet={<DashboardLayout />} />}>
               <Route index element={<Dashboard />}></Route>
-              <Route path="dash" element={<EnhancedDashboard />} />
-       
+              <Route path="dash" element={<Dashboard />} />
               <Route path="*" element={<Dashboard />} />
             </Route>
 
             <Route path="login" element={<Login />} />
-            <Route path="transaction/response" element={<GifModal />} />
-            <Route path="reset-password" element={<ResetPasswordPage />} />
+            {/* <Route path="transaction/response" element={<GifModal />} /> */}
+         
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

@@ -4,7 +4,7 @@ import { Visibility, VisibilityOff } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 import { AuthService } from '@/services/auth.service'
 import { LocalStorageService } from '@/helpers/local-storage-service'
-import { Logo, SecondLogo } from '@/assets/images'
+// import { Logo, SecondLogo } from '@/assets/images'
 
 import { useRecoilState } from 'recoil'
 import {
@@ -18,7 +18,7 @@ import {
 } from '@/states/state'
 import { UserService } from '@/services/user.service'
 import staticdataService from '@/services/staticdata.service'
-import LoaderUI from '@/components/common/loader/loader'
+// import LoaderUI from '@/components/common/loader/loader'
 import { TransactionService } from '@/services/transaction.service'
 import { FieldValidationService } from '@/services/fieldvalidstion.service'
 import { CountryLabelData, LoginPageLabel } from '@/types/field.validation.type'
@@ -216,8 +216,8 @@ const LoginPage = () => {
               mb: 20,
             }}
           >
-            <img src={Logo} alt="Logo" height={100} />
-            <img src={SecondLogo} alt="Logo" height={30} />
+            {/* <img src={Logo} alt="Logo" height={100} />
+            <img src={SecondLogo} alt="Logo" height={30} /> */}
           </Box>
 
           <Typography variant="h3" fontWeight="bold">
@@ -307,7 +307,7 @@ const LoginPage = () => {
         }}
       />
 
-      <LoaderUI.LoaderBackdrop openloader={commonloader} />
+      {/* <LoaderUI.LoaderBackdrop openloader={commonloader} /> */}
 
       <Snackbar
         anchorOrigin={{ vertical: 'top', horizontal: 'right' }}

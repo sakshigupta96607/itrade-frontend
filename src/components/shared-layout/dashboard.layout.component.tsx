@@ -16,7 +16,7 @@ import {
   Dialog,
 } from '@mui/material'
 import { styled } from '@mui/system'
-import { LogoWhite } from '@/assets/images'
+// import { LogoWhite } from '@/assets/images'
 import { Link, Outlet, useNavigate } from 'react-router-dom'
 import { useRecoilState } from 'recoil'
 import Person2Icon from '@mui/icons-material/Person2'
@@ -51,7 +51,7 @@ import ShowChartIcon from '@mui/icons-material/ShowChart'
 import ViewModuleIcon from '@mui/icons-material/ViewModule'
 import LoyaltyIcon from '@mui/icons-material/Loyalty'
 import ErrorIcon from '@mui/icons-material/Error'
-import ProfileMenu from '../profilesetting'
+// import ProfileMenu from '../profilesetting'
 import RefreshIcon from '@mui/icons-material/Refresh'
 import WcIcon from '@mui/icons-material/Wc'
 import AirIcon from '@mui/icons-material/Air'
@@ -211,12 +211,7 @@ const CountrySelector = () => {
 }
 
 const MASTER_MENU = [
-  // {
-  //   label: 'Field-Validation',
-  //   name: 'Field-Validation',
-  //   icon: <LoyaltyIcon fontSize="small" />,
-  //   path: '/field-validation',
-  // },
+
   {
     label: 'Static-Gender',
     name: 'Gender',
@@ -577,232 +572,7 @@ const DashboardLayout = () => {
       ),
       label: 'Dashboard',
       name: 'Dashboard',
-    },
-    {
-      icon: (
-        <PeopleOutlineIcon
-          sx={{
-            //@ts-ignore
-            color: theme.palette.secondary.light,
-            fontSize: '2vh',
-            //@ts-ignore
-            color: theme.palette.primary.light,
-            '&:hover': {
-              //@ts-ignore
-              color: theme.palette.primary.main, // Change the color to blue on hover
-            },
-          }}
-        />
-      ),
-      label: 'Applicant',
-      name: 'Users',
-    },
-    {
-      icon: (
-        <>
-          <EmojiEventsIcon
-            sx={{
-              //@ts-ignore
-              fontSize: '2vh',
-              //@ts-ignore
-              color: theme.palette.primary.light, // Corrected theme usage
-            }}
-          />
-        </>
-      ),
-      label: 'Rewards',
-      name: 'Rewards',
-    },
-    {
-      icon: (
-        <CompareArrowsIcon
-          sx={{
-            //@ts-ignore
-            color: theme.palette.secondary.light,
-            fontSize: '2vh',
-            //@ts-ignore
-            color: theme.palette.primary.light,
-            '&:hover': {
-              //@ts-ignore
-              color: theme.palette.primary.main, // Change the color to blue on hover
-            },
-          }}
-        />
-      ),
-      label: 'Transaction',
-      name: 'Transactions',
-    },
-
-    {
-      icon: (
-        <ContactEmergencyIcon
-          sx={{
-            //@ts-ignore
-            color: theme.palette.secondary.light,
-            fontSize: '2vh',
-            //@ts-ignore
-            color: theme.palette.primary.light,
-            '&:hover': {
-              //@ts-ignore
-              color: theme.palette.primary.main, // Change the color to blue on hover
-            },
-          }}
-        />
-      ),
-      label: 'Kyc',
-      name: 'KYC',
-    },
-
-    {
-      icon: (
-        <>
-          <SourceIcon
-            sx={{
-              //@ts-ignore
-              fontSize: '2vh',
-              //@ts-ignore
-              color: theme.palette.primary.light, // Corrected theme usage
-            }}
-          />
-        </>
-      ),
-      label: 'Bop',
-      name: staffCountry === 'UAE' ? 'PaymentInfo' : 'BOP',
-    },
-    {
-      icon: (
-        <>
-          <Person2Icon
-            sx={{
-              //@ts-ignore
-              fontSize: '2vh',
-              //@ts-ignore
-              color: theme.palette.primary.light, // Corrected theme usage
-            }}
-          />
-        </>
-      ),
-      label: 'Profile',
-      name: 'Staff',
-    },
-    {
-      icon: (
-        <>
-          <SupervisedUserCircleIcon
-            sx={{
-              //@ts-ignore
-              fontSize: '2vh',
-              //@ts-ignore
-              color: theme.palette.primary.light, // Corrected theme usage
-            }}
-          />
-        </>
-      ),
-      label: 'Role',
-      name: 'Roles',
-    },
-    {
-      icon: (
-        <>
-          <ViewModuleIcon
-            sx={{
-              //@ts-ignore
-              fontSize: '2vh',
-              //@ts-ignore
-              color: theme.palette.primary.light, // Corrected theme usage
-            }}
-          />
-        </>
-      ),
-      label: 'Module',
-      name: 'Modules',
-    },
-
-    {
-      icon: (
-        <>
-          <AccountBalanceIcon
-            sx={{
-              //@ts-ignore
-              fontSize: '2vh',
-              //@ts-ignore
-              color: theme.palette.primary.light, // Corrected theme usage
-            }}
-          />
-        </>
-      ),
-      label: 'Cdi',
-      name: 'CDI',
-    },
-
-    {
-      icon: (
-        <>
-          <IconButton>
-            <WaterfallChartIcon
-              sx={{
-                fontSize: '2vh',
-                //@ts-ignore
-                color: theme.palette.primary.light,
-              }}
-            />
-          </IconButton>
-        </>
-      ),
-      label: 'Static',
-      name: 'Static Data',
-    },
-
-    {
-      icon: (
-        <>
-          <ErrorIcon
-            sx={{
-              //@ts-ignore
-              fontSize: '2vh',
-              //@ts-ignore
-              color: theme.palette.primary.light, // Corrected theme usage
-            }}
-          />
-        </>
-      ),
-      label: 'SarbErrors',
-      name: 'Error Codes',
-    },
-
-    {
-      icon: (
-        <>
-          <LoyaltyIcon
-            sx={{
-              //@ts-ignore
-              fontSize: '2vh',
-              //@ts-ignore
-              color: theme.palette.primary.light, // Corrected theme usage
-            }}
-          />
-        </>
-      ),
-      label: 'Loyalty',
-      name: 'Loyalty',
-    },
-
-    {
-      icon: (
-        <>
-          <LoyaltyIcon
-            sx={{
-              //@ts-ignore
-              fontSize: '2vh',
-              //@ts-ignore
-              color: theme.palette.primary.light, // Corrected theme usage
-            }}
-          />
-        </>
-      ),
-      label: 'Audit-Logs',
-      name: 'Audit-Logs',
-    },
+    }
   ]
 
   useEffect(() => {
@@ -884,7 +654,7 @@ const DashboardLayout = () => {
 
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, textAlign: 'center' }}>
               <Link to="/dashboard">
-                <img
+                {/* <img
                   src={LogoWhite}
                   alt="Logo"
                   style={{
@@ -893,13 +663,13 @@ const DashboardLayout = () => {
                     objectFit: 'contain',
                     // marginLeft:"10%"t
                   }}
-                />
+                /> */}
               </Link>
             </Box>
 
             {/* Right side - Profile box (MADE RESPONSIVE) */}
 
-            <ProfileMenu></ProfileMenu>
+            {/* <ProfileMenu></ProfileMenu> */}
           </Box>
         </Toolbar>
       </AppBar>
@@ -953,15 +723,7 @@ const DashboardLayout = () => {
             >
               {menuItems.map((item, index) => (
                 <>
-                  {!(
-                    (item.name === 'KYC' ||
-                      item.name === 'CDI' ||
-                      item.name === 'Error Codes' ||
-                      item.name === 'Loyalty' ||
-                      item.name === 'Audit-Logs' ||
-                      item.name === 'Static Data') &&
-                    staffCountry === 'UAE'
-                  ) && (
+              
                     <ListItem
                       button
                       selected={selectedApp === item.label}
@@ -1005,35 +767,11 @@ const DashboardLayout = () => {
                         </Item>
                       </Stack>
                     </ListItem>
-                  )}
+              
                 </>
               ))}
 
-              <ListItem
-                button
-                id="imp-master-data"
-                key="logout1"
-                sx={{
-                  textAlign: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                <Stack
-                  sx={{
-                    textAlign: 'center',
-                    width: '100%',
-                  }}
-                >
-                  <MasterDropdownIcon
-                    //@ts-ignore
-                    setSelectedApp={setSelectedApp}
-                    addToHistory={addToHistory}
-                    //@ts-ignore
-                    selectedApp={selectedApp}
-                    item={undefined}
-                  ></MasterDropdownIcon>
-                </Stack>
-              </ListItem>
+            
             </List>
           </Box>
 
