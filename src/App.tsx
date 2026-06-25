@@ -1,10 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import DashboardLayout from './components/shared-layout'
+import DashboardLayout from './components/layout/DashboardLayout'
 import ProtectedRoute, { ProtectedRouteProps } from './helpers/protected-route'
 import Login from './pages/newlogin'
 import type {} from '@mui/x-data-grid/themeAugmentation'
-
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { inactivityTiming } from '@/states/state'
@@ -29,8 +28,7 @@ function App() {
   const handleInactivity = () => {
     if (localStorageService.get_accesstoken() != null) {
       setWarningOpen(true)
-    }
-  }
+    }  }
   
   const handleLogout = useCallback(() => {
     if (localStorageService?.get_accesstoken() != null) {
@@ -46,7 +44,7 @@ function App() {
 
   return (
     <>
-      <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
         <CssBaseline />
         {/* <LoaderBackdrop /> */}
         {/* <Message /> */}
@@ -54,10 +52,14 @@ function App() {
         {/* <InactivityWarningModal open={warningOpen} onStay={() => setWarningOpen(false)} onLogout={handleLogout} /> */}
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<ProtectedRoute {...defaultProtectedRouteProps} outlet={<DashboardLayout />} />}>
+            {/* <Route path="/" element={<ProtectedRoute {...defaultProtectedRouteProps} outlet={<DashboardLayout />} />}>
               <Route index element={<Dashboard />}></Route>
               <Route path="*" element={<Dashboard />} />
-            </Route>
+            </Route> */}
+                <Route path="/" element={<DashboardLayout />}>
+      <Route index element={<Dashboard />} />
+      <Route path="*" element={<Dashboard />} />
+    </Route>
 
             <Route path="login" element={<Login />} />
           </Routes>

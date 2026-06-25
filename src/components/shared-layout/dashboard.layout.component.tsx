@@ -21,7 +21,6 @@ import { Link, Outlet, useNavigate } from 'react-router-dom'
 import { useRecoilState } from 'recoil'
 import Person2Icon from '@mui/icons-material/Person2'
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle'
-import { menuHistoryState, themeModeState } from '@/states/state'
 import { LocalStorageService } from '@/helpers/local-storage-service'
 import AddToQueueIcon from '@mui/icons-material/AddToQueue'
 import {
@@ -34,7 +33,7 @@ import {
   HomeRepairServiceRounded,
   LeakRemove,
 } from '@mui/icons-material'
-import { alertState, selectedAppState, loaderStateNew } from '@/states/state'
+import {  loaderStateNew } from '@/states/state'
 import { useState, useEffect } from 'react'
 import Backdrop from '@mui/material/Backdrop'
 import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline'
@@ -210,265 +209,265 @@ const CountrySelector = () => {
   )
 }
 
-const MASTER_MENU = [
+// const MASTER_MENU = [
 
-  {
-    label: 'Static-Gender',
-    name: 'Gender',
-    icon: <WcIcon fontSize="small" />,
-    path: '/static-gender',
-  },
-  {
-    label: 'Channel',
-    name: 'Channels',
-    icon: <AirIcon fontSize="small" />,
-    path: '/channel',
-  },
-  {
-    label: 'States',
-    name: 'States',
-    icon: <LanguagesIcon fontSize="small" />,
-    path: '/states',
-  },
-  {
-    label: 'Bank-Type',
-    name: 'Bank-Type',
-    icon: <FilterBAndW fontSize="small" />,
-    path: '/bank-type',
-  },
-  {
-    label: 'Bank-Master',
-    name: 'Bank-Master',
-    icon: <AccountBalanceIcon fontSize="small" />,
-    path: 'banks-master',
-  },
-  {
-    label: 'Sub Services',
-    name: 'Sub Services',
-    icon: <LeakRemove fontSize="small" />,
-    path: 'subservice',
-  },
-  {
-    label: 'Services',
-    name: 'Service',
-    icon: <HomeRepairServiceRounded fontSize="small" />,
-    path: 'service',
-  },
-  {
-    label: 'Products',
-    name: 'Products',
-    icon: <Inventory2Icon fontSize="small" />,
-    path: 'product',
-  },
-  {
-    label: 'Bop Category Type',
-    name: 'Bop Category',
-    icon: <ReportOffIcon fontSize="small" />,
-    path: 'bop-category-type',
-  },
-  {
-    label: 'Bop Category',
-    name: 'Bop Category',
-    icon: <ReportIcon fontSize="small" />,
-    path: 'bopcategory',
-  },
-  {
-    label: 'Product Buisness Mapping',
-    name: 'Product Buisness Mapping',
-    icon: <CardTravel fontSize="small" />,
-    path: 'product-buisness-mapping',
-  },
-  {
-    label: 'Buisness Railand Partners',
-    name: 'Buisness Railand Partners',
-    icon: <CardMembershipRounded fontSize="small" />,
-    path: 'business-railand-partner',
-  },
-  {
-    label: 'Forex Currency',
-    name: 'Forex Currency',
-    icon: <AttachMoneyIcon fontSize="small" />,
-    path: 'forex-currency-master',
-  },
+//   {
+//     label: 'Static-Gender',
+//     name: 'Gender',
+//     icon: <WcIcon fontSize="small" />,
+//     path: '/static-gender',
+//   },
+//   {
+//     label: 'Channel',
+//     name: 'Channels',
+//     icon: <AirIcon fontSize="small" />,
+//     path: '/channel',
+//   },
+//   {
+//     label: 'States',
+//     name: 'States',
+//     icon: <LanguagesIcon fontSize="small" />,
+//     path: '/states',
+//   },
+//   {
+//     label: 'Bank-Type',
+//     name: 'Bank-Type',
+//     icon: <FilterBAndW fontSize="small" />,
+//     path: '/bank-type',
+//   },
+//   {
+//     label: 'Bank-Master',
+//     name: 'Bank-Master',
+//     icon: <AccountBalanceIcon fontSize="small" />,
+//     path: 'banks-master',
+//   },
+//   {
+//     label: 'Sub Services',
+//     name: 'Sub Services',
+//     icon: <LeakRemove fontSize="small" />,
+//     path: 'subservice',
+//   },
+//   {
+//     label: 'Services',
+//     name: 'Service',
+//     icon: <HomeRepairServiceRounded fontSize="small" />,
+//     path: 'service',
+//   },
+//   {
+//     label: 'Products',
+//     name: 'Products',
+//     icon: <Inventory2Icon fontSize="small" />,
+//     path: 'product',
+//   },
+//   {
+//     label: 'Bop Category Type',
+//     name: 'Bop Category',
+//     icon: <ReportOffIcon fontSize="small" />,
+//     path: 'bop-category-type',
+//   },
+//   {
+//     label: 'Bop Category',
+//     name: 'Bop Category',
+//     icon: <ReportIcon fontSize="small" />,
+//     path: 'bopcategory',
+//   },
+//   {
+//     label: 'Product Buisness Mapping',
+//     name: 'Product Buisness Mapping',
+//     icon: <CardTravel fontSize="small" />,
+//     path: 'product-buisness-mapping',
+//   },
+//   {
+//     label: 'Buisness Railand Partners',
+//     name: 'Buisness Railand Partners',
+//     icon: <CardMembershipRounded fontSize="small" />,
+//     path: 'business-railand-partner',
+//   },
+//   {
+//     label: 'Forex Currency',
+//     name: 'Forex Currency',
+//     icon: <AttachMoneyIcon fontSize="small" />,
+//     path: 'forex-currency-master',
+//   },
 
-  {
-    label: 'Forex Country',
-    name: 'Forex Country',
-    icon: <LanguageIcon fontSize="small" />,
-    path: 'forex-country-master',
-  },
-  {
-    label: 'Screen Master',
-    name: 'Screen master',
-    icon: <MonitorIcon fontSize="small" />,
-    path: 'screen',
-  },
-  {
-    label: 'WhatsApp Master',
-    name: 'WhatsApp master',
-    icon: <WhatsAppIcon fontSize="small" />,
-    path: 'whatsapp',
-  },
-  // {
-  //   label: 'Sms Master',
-  //   name: 'Sms manegement master',
-  //   icon: <SmsIcon fontSize="small" />,
-  //   path: 'smsmanegement',
-  // },
-  {
-    label: 'Email Master',
-    name: 'Email manegement master',
-    icon: <EmailIcon fontSize="small" />,
-    path: 'email-manegement',
-  },
-  // {
-  //   label: 'Verification Master',
-  //   name: 'Email manegement master',
-  //   icon: <VerifiedIcon fontSize="small" />,
-  //   path: 'verification-partner',
-  // },
-  {
-    label: 'Country Kyc Master',
-    name: 'Country Kyc master',
-    icon: <FactCheckIcon fontSize="small" />,
-    path: 'country-Kyc-doc-management',
-  },
-  {
-    label: 'Terms and Condition',
-    name: 'Terms and Condition',
-    icon: <DescriptionIcon fontSize="small" />,
-    path: 'terms-condition',
-  },
+//   {
+//     label: 'Forex Country',
+//     name: 'Forex Country',
+//     icon: <LanguageIcon fontSize="small" />,
+//     path: 'forex-country-master',
+//   },
+//   {
+//     label: 'Screen Master',
+//     name: 'Screen master',
+//     icon: <MonitorIcon fontSize="small" />,
+//     path: 'screen',
+//   },
+//   {
+//     label: 'WhatsApp Master',
+//     name: 'WhatsApp master',
+//     icon: <WhatsAppIcon fontSize="small" />,
+//     path: 'whatsapp',
+//   },
+//   // {
+//   //   label: 'Sms Master',
+//   //   name: 'Sms manegement master',
+//   //   icon: <SmsIcon fontSize="small" />,
+//   //   path: 'smsmanegement',
+//   // },
+//   {
+//     label: 'Email Master',
+//     name: 'Email manegement master',
+//     icon: <EmailIcon fontSize="small" />,
+//     path: 'email-manegement',
+//   },
+//   // {
+//   //   label: 'Verification Master',
+//   //   name: 'Email manegement master',
+//   //   icon: <VerifiedIcon fontSize="small" />,
+//   //   path: 'verification-partner',
+//   // },
+//   {
+//     label: 'Country Kyc Master',
+//     name: 'Country Kyc master',
+//     icon: <FactCheckIcon fontSize="small" />,
+//     path: 'country-Kyc-doc-management',
+//   },
+//   {
+//     label: 'Terms and Condition',
+//     name: 'Terms and Condition',
+//     icon: <DescriptionIcon fontSize="small" />,
+//     path: 'terms-condition',
+//   },
 
-  {
-    label: 'Country Label Code Master',
-    name: 'Country Label Code Master',
-    icon: <PublicIcon fontSize="small" />,
-    path: 'country-label-code-master',
-  },
-  {
-    label: 'Country label Master',
-    name: 'Country label Master',
-    icon: <LocationOnIcon fontSize="small" />,
-    path: 'country-label-master',
-  },
-  {
-    label: 'Country Reporting Label Master',
-    name: 'Country Reporting Label Master',
-    icon: <AssessmentIcon fontSize="small" />,
-    path: 'country-reporting-label-master',
-  },
-  {
-    label: 'Vendor Master',
-    name: 'Vendor Master',
-    icon: <BusinessIcon fontSize="small" />,
-    path: 'vendorapimaster',
-  },
-  {
-    label: 'Vendor Url Master',
-    name: 'Vendor Url Master',
-    icon: <LinkIcon fontSize="small" />,
-    path: 'urlmaster',
-  },
-  {
-    label: 'vendor master table',
-    name: 'vendorapi master table ',
-    icon: <HandshakeIcon fontSize="small" />,
-    path: 'vendorapimastertable',
-  },
-  {
-    label: 'Country Corridor Page',
-    name: 'Country Corridor Page',
-    icon: <AltRouteIcon fontSize="small" />,
-    path: 'country-corridor-page',
-  },
-  {
-    label: 'Kyc Limit Type',
-    name: 'Kyc Limit Type',
-    icon: <SpeedIcon fontSize="small" />,
-    path: 'kyc-limit-type',
-  },
-  {
-    label: 'Resident Type',
-    name: 'Resident Type',
-    icon: <HomeIcon fontSize="small" />,
-    path: 'resident-type',
-  },
-  {
-    label: 'KYC Document Type',
-    name: 'KYC Document Type',
-    icon: <BadgeIcon fontSize="small" />,
-    path: 'kyc-document-type',
-  },
-  {
-    label: 'Country Limit Type Wise',
-    name: 'Country Limit Type Wise',
-    icon: <RuleIcon fontSize="small" />,
-    path: 'country-limit-type-wise',
-  },
+//   {
+//     label: 'Country Label Code Master',
+//     name: 'Country Label Code Master',
+//     icon: <PublicIcon fontSize="small" />,
+//     path: 'country-label-code-master',
+//   },
+//   {
+//     label: 'Country label Master',
+//     name: 'Country label Master',
+//     icon: <LocationOnIcon fontSize="small" />,
+//     path: 'country-label-master',
+//   },
+//   {
+//     label: 'Country Reporting Label Master',
+//     name: 'Country Reporting Label Master',
+//     icon: <AssessmentIcon fontSize="small" />,
+//     path: 'country-reporting-label-master',
+//   },
+//   {
+//     label: 'Vendor Master',
+//     name: 'Vendor Master',
+//     icon: <BusinessIcon fontSize="small" />,
+//     path: 'vendorapimaster',
+//   },
+//   {
+//     label: 'Vendor Url Master',
+//     name: 'Vendor Url Master',
+//     icon: <LinkIcon fontSize="small" />,
+//     path: 'urlmaster',
+//   },
+//   {
+//     label: 'vendor master table',
+//     name: 'vendorapi master table ',
+//     icon: <HandshakeIcon fontSize="small" />,
+//     path: 'vendorapimastertable',
+//   },
+//   {
+//     label: 'Country Corridor Page',
+//     name: 'Country Corridor Page',
+//     icon: <AltRouteIcon fontSize="small" />,
+//     path: 'country-corridor-page',
+//   },
+//   {
+//     label: 'Kyc Limit Type',
+//     name: 'Kyc Limit Type',
+//     icon: <SpeedIcon fontSize="small" />,
+//     path: 'kyc-limit-type',
+//   },
+//   {
+//     label: 'Resident Type',
+//     name: 'Resident Type',
+//     icon: <HomeIcon fontSize="small" />,
+//     path: 'resident-type',
+//   },
+//   {
+//     label: 'KYC Document Type',
+//     name: 'KYC Document Type',
+//     icon: <BadgeIcon fontSize="small" />,
+//     path: 'kyc-document-type',
+//   },
+//   {
+//     label: 'Country Limit Type Wise',
+//     name: 'Country Limit Type Wise',
+//     icon: <RuleIcon fontSize="small" />,
+//     path: 'country-limit-type-wise',
+//   },
 
-  {
-    label: 'KYC Document Mapping',
-    name: 'Kyc Document Mapping',
-    icon: <AccountTreeIcon fontSize="small" />,
-    path: 'kyc-doc-mapping',
-  },
-  {
-    label: 'Exchange Rate',
-    name: 'Exchange Rate',
-    icon: <CurrencyExchangeIcon fontSize="small" />,
-    path: 'exchange-rate',
-  },
-  {
-    label: 'Sequence Master',
-    name: 'ESequence Master',
-    icon: <FormatListNumberedIcon fontSize="small" />,
-    path: 'sequence-master',
-  },
-  {
-    label: 'Country Product Code',
-    name: 'Country Product Code',
-    icon: <QrCodeIcon fontSize="small" />,
-    path: 'country-product-code',
-  },
-  {
-    label: 'Product Sub Service',
-    name: 'Product Sub Service',
-    icon: <PrecisionManufacturingIcon fontSize="small" />,
-    path: 'product-subservice',
-  },
+//   {
+//     label: 'KYC Document Mapping',
+//     name: 'Kyc Document Mapping',
+//     icon: <AccountTreeIcon fontSize="small" />,
+//     path: 'kyc-doc-mapping',
+//   },
+//   {
+//     label: 'Exchange Rate',
+//     name: 'Exchange Rate',
+//     icon: <CurrencyExchangeIcon fontSize="small" />,
+//     path: 'exchange-rate',
+//   },
+//   {
+//     label: 'Sequence Master',
+//     name: 'ESequence Master',
+//     icon: <FormatListNumberedIcon fontSize="small" />,
+//     path: 'sequence-master',
+//   },
+//   {
+//     label: 'Country Product Code',
+//     name: 'Country Product Code',
+//     icon: <QrCodeIcon fontSize="small" />,
+//     path: 'country-product-code',
+//   },
+//   {
+//     label: 'Product Sub Service',
+//     name: 'Product Sub Service',
+//     icon: <PrecisionManufacturingIcon fontSize="small" />,
+//     path: 'product-subservice',
+//   },
 
-  {
-    label: 'Service Sub Service Mapping',
-    name: 'Service Sub Service Mapping',
-    icon: <AddToQueueIcon fontSize="small" />,
-    path: 'service-sub-service-mapping',
-  },
-  {
-    label: 'Notification Master',
-    name: 'Notification Master',
-    icon: <NotificationsIcon fontSize="small" />,
-    path: 'notifications',
-  },
-  {
-    label: 'Notification Campaign',
-    name: 'Notification Campaign',
-    icon: <CampaignIcon fontSize="small" />,
-    path: 'notification-campaign',
-  },
-  {
-    label: 'Privacy Policy',
-    name: 'Privacy Policy',
-    icon: <PrivacyTipIcon fontSize="small" />,
-    path: 'privacy-policy',
-  },
-  {
-    label: 'Coupons',
-    name: 'Coupons',
-    icon: <LocalOfferIcon fontSize="small" />,
-    path: 'coupons',
-  },
-]
+//   {
+//     label: 'Service Sub Service Mapping',
+//     name: 'Service Sub Service Mapping',
+//     icon: <AddToQueueIcon fontSize="small" />,
+//     path: 'service-sub-service-mapping',
+//   },
+//   {
+//     label: 'Notification Master',
+//     name: 'Notification Master',
+//     icon: <NotificationsIcon fontSize="small" />,
+//     path: 'notifications',
+//   },
+//   {
+//     label: 'Notification Campaign',
+//     name: 'Notification Campaign',
+//     icon: <CampaignIcon fontSize="small" />,
+//     path: 'notification-campaign',
+//   },
+//   {
+//     label: 'Privacy Policy',
+//     name: 'Privacy Policy',
+//     icon: <PrivacyTipIcon fontSize="small" />,
+//     path: 'privacy-policy',
+//   },
+//   {
+//     label: 'Coupons',
+//     name: 'Coupons',
+//     icon: <LocalOfferIcon fontSize="small" />,
+//     path: 'coupons',
+//   },
+// ]
 
 const chunkArray = (arr: any[], size: number) => {
   const chunks = []
@@ -533,7 +532,7 @@ const MasterDropdownIcon = ({ setSelectedApp, addToHistory, selectedApp }: any) 
 }
 
 const DashboardLayout = () => {
-  const [mode, setMode] = useRecoilState(themeModeState)
+  // const [mode, setMode] = useRecoilState(themeModeState)
   const [open, setOpen] = useRecoilState(alertState)
   const staffCountry = local_service?.get_staff_country()
   const [selectedApp, setSelectedApp] = useRecoilState(selectedAppState)
@@ -543,15 +542,15 @@ const DashboardLayout = () => {
   const navigate = useNavigate()
   const theme = useTheme()
 
-  const [history, setHistory] = useRecoilState(menuHistoryState)
+  // const [history, setHistory] = useRecoilState(menuHistoryState)
 
   // 1. ADD: Adds item to the end (prevents duplicates if desired)
-  const addToHistory = (menuName: string) => {
-    setHistory((oldHistory) => {
-      // if (oldHistory.includes(menuName)) return oldHistory; // Avoid duplicates
-      return [...oldHistory, menuName]
-    })
-  }
+  // const addToHistory = (menuName: string) => {
+  //   setHistory((oldHistory) => {
+  //     // if (oldHistory.includes(menuName)) return oldHistory; // Avoid duplicates
+  //     return [...oldHistory, menuName]
+  //   })
+  // }
 
   const menuItems = [
     {
